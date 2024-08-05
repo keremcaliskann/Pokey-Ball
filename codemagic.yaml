@@ -19,5 +19,5 @@ workflows:
             -projectPath . \
             -executeMethod Build.BuildAndroid \
             -nographics
-    # artifacts:
-    #   - android/*.aab
+    artifacts:
+      - android/*.aab
