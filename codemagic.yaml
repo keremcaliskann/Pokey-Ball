@@ -3,21 +3,21 @@ workflows:
     name: Unity Android Workflow
     max_build_duration: 120
     environment:
-      groups:
-        - unity_credentials
-        - google_play
+    #   groups:
+    #     - unity_credentials
+    #     - google_play
       vars:
         BUILD_SCRIPT: BuildAndroid
         GOOGLE_PLAY_TRACK: alpha
         PACKAGE_NAME: "io.codemagic.unitysample"
-    scripts:
-      - name: Build the project
-        script: | 
-          $UNITY_HOME/Contents/MacOS/Unity -batchmode \
-            -quit \
-            -logFile \
-            -projectPath . \
-            -executeMethod BuildScript.BuildAndroid \
-            -nographics
+    # scripts:
+    #   - name: Build the project
+    #     script: | 
+    #       $UNITY_HOME/Contents/MacOS/Unity -batchmode \
+    #         -quit \
+    #         -logFile \
+    #         -projectPath . \
+    #         -executeMethod BuildScript.BuildAndroid \
+    #         -nographics
     # artifacts:
     #   - android/*.aab
