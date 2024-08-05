@@ -10,14 +10,14 @@ workflows:
         BUILD_SCRIPT: BuildAndroid
         GOOGLE_PLAY_TRACK: alpha
         PACKAGE_NAME: "io.codemagic.unitysample"
-    # scripts:
-    #   - name: Build the project
-    #     script: | 
-    #       $UNITY_HOME/Contents/MacOS/Unity -batchmode \
-    #         -quit \
-    #         -logFile \
-    #         -projectPath . \
-    #         -executeMethod BuildScript.BuildAndroid \
-    #         -nographics
+    scripts:
+      - name: Build the project
+        script: | 
+          $UNITY_HOME/Contents/MacOS/Unity -batchmode \
+            -quit \
+            -logFile \
+            -projectPath . \
+            -executeMethod Build.BuildAndroid \
+            -nographics
     # artifacts:
     #   - android/*.aab
