@@ -3,8 +3,6 @@ workflows:
     name: Unity Android Workflow
     max_build_duration: 120
     environment:
-      android_signing:
-        - keystore_reference
       groups:
         - unity_credentials
         - google_play
